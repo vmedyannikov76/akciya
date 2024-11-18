@@ -19,8 +19,28 @@ function getProducts(){
     const freeProduct = countProducts / 3; //количество бесплатных товаров
     console.log('Количество бесплатных товаров',freeProduct);
 
-    let texCount = 0
-    for(let i=0; )
+    let texCount = 0;
+    let sumFree = 0;
+    for(texCount; texCount < freeProduct; texCount++){
+        for(let i = 0; i<productsSort[i].quantity; i++){
+            productsSort[i].amount -=productsSort[i].price
+
+            sumFree += productsSort[i].price
+            console.log(productsSort[i].name);
+            
+            tcart__updateTotalProductsinCartObj();
+            tcart__reDrawCartIcon();
+            tcart__reDrawTotal();
+            tcart__saveLocalObj();
+            tcart__reDrawProducts()
+        
+        }
+
+    }
+    console.log(sumFree);
+    console.log(productsSort);
+    console.log(texCount);
+    
 
     // return freeProduct
 }

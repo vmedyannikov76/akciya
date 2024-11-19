@@ -1,0 +1,91 @@
+.t-store__filter__item-controls-container {
+    /* может быть много фильтров */
+    display: flex;
+  flex-direction: column;
+}
+label:has([name="XS"]) {
+    order: 1;
+}
+label:has([name="XS (на рост 155см-170см)"]) {
+    order: 2;
+}
+label:has([name="XS-S"]) {
+    order: 3;
+}
+label:has([name="S"]) {
+    order: 4;
+}
+label:has([name="S (на рост 155см-170см)"]) {
+    order: 5;
+}
+label:has([name="S-M"]) {
+    order: 6;
+}
+label:has([name="S-M (под отшив 10 дней)"]) {
+    order: 7;
+}
+label:has([name="M"]) {
+    order: 8;
+}
+label:has([name="M (на рост 155см-170см)"]) {
+    order: 9;
+}
+label:has([name="M-L"]) {
+    order: 10;
+}
+label:has([name="L"]) {
+    order: 11;
+}
+label:has([name="L (на рост 155см-170см)"]) {
+    order: 12;
+}
+label:has([name="L-XL"]) {
+    order: 13;
+}
+label:has([name="L-XL (под отшив 14 дней)"]) {
+    order: 14;
+}
+label:has([name="XL"]) {
+    order: 15;
+}
+label:has([name="Onesize"]) {
+    order: 16;
+}
+label:has([name="Onesize (под отшив 10 дней)"]) {
+    order: 17;
+}
+label:has([name="Onesize (под отшив 14 дней)"]) {
+    order: 18;
+}
+
+label:has([name="small"]) {
+    order: 19;
+}
+label:has([name="tall"]) {
+    order: 20;
+}
+
+
+
+
+
+/*если активный пункт*/
+label.active:has([name="XS"]) {
+    order: 1;
+}
+label:has([name="XS (на рост 155см-170см)"]){
+    /* display: none; */
+    max-height: 0 ;
+    margin-bottom: 0 !important;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+label.active:has([name="XS"]) + label:has([name="XS (на рост 155см-170см)"]) {
+    order: 2;
+    padding-left: 10px;
+    /* display: initial; */
+    max-height: 200px;
+    margin-bottom: 8px !important;
+    overflow: initial;
+    transition: all .3s ease-in-out;
+}
